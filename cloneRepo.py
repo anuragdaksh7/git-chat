@@ -4,8 +4,8 @@ from pathlib import Path
 
 def clone_repo(repo_url, dest_dir):
   if not os.path.exists(dest_dir):
-    print(f"Cloning {repo_url} to ./tmp/{dest_dir}")
-    Repo.clone_from(repo_url, "./tmp/"+dest_dir)
+    print(f"Cloning {repo_url} to {dest_dir}")
+    Repo.clone_from(repo_url, dest_dir)
     print("Repo cloned")
   else:
     print("Repo already cloned")
